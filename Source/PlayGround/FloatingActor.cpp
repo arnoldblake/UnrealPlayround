@@ -8,6 +8,7 @@ AFloatingActor::AFloatingActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	Magnitude = 20.0f;
 
 }
 
@@ -25,12 +26,8 @@ void AFloatingActor::Tick(float DeltaTime)
 
 	FVector NewLocation = GetActorLocation();
 	float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
-<<<<<<< HEAD
-	NewLocation.Z += DeltaHeight * 20.0f;
-=======
 	NewLocation.Z += DeltaHeight * Magnitude;
 	NewLocation.Y += DeltaHeight * 0.6f;
->>>>>>> c366a4e... Programming Quick Start
 	RunningTime += DeltaTime;
 	SetActorLocation(NewLocation);
 }

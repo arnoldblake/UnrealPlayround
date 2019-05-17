@@ -22,13 +22,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-<<<<<<< HEAD
-=======
 	
 	// Magnitude of FloatingActors movement
 	UPROPERTY(EditAnywhere)
 	float Magnitude;
-
->>>>>>> c366a4e... Programming Quick Start
 	float RunningTime;
 };
